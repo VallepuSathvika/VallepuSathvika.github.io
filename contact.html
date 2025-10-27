@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sathvika Portfolio</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <section class="contact-section">
+    <div class="contact-card">
+      <h2>Contact Me</h2>
+      <p class="subtitle">Let's connect! Feel free to reach out for internship or job opportunities</p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:sathvika@example.com">sathvika@example.com</a></p>
+        <p><strong>Phone:</strong> +91 9014625732</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sathvikavallepu" target="_blank">linkedin.com/in/sathvikavallepu</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/VallepuSathvika" target="_blank">github.com/VallepuSathvika</a></p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+  <input type="text" id="name" placeholder="Your Name" />
+  <input type="email" id="email" placeholder="Your Email" />
+  <textarea id="message" placeholder="Your Message" rows="4"></textarea>
+  <button type="button" onclick="validateAndSend()">Send Message</button>
+</form>
+
+    </div>
+  </section>
+
+  <script>
+    function validateAndSend() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields before sending the message 💬");
+        return;
+      }
+
+      alert("Thank you for contacting, Sathvika will reach you soon 💜");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

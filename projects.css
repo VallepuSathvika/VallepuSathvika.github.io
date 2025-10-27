@@ -1,0 +1,179 @@
+/* ---------------- Body / Projects Section ---------------- */ 
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #9d4edd, #9d4edd);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.projects-section {
+  width: 100%;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Heading style */
+.projects-heading {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #ffb3ff, #ffd700);
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(255, 214, 255, 0.6);
+  margin-bottom: 25px;
+}
+
+.projects-heading h2 {
+  margin: 0;
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 10px #ffb1d5;
+}
+
+/* Intro text */
+.intro {
+  font-size: 18px;
+  color: #f3e8ff;
+  margin-bottom: 40px;
+}
+
+/* ---------------- Projects Container ---------------- */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ---------------- Project Card ---------------- */
+.project-card {
+  width: 270px;
+  padding: 28px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 25px rgba(255,182,255,0.4), 0 0 20px rgba(255,215,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+}
+
+/* Hover Effect */
+.project-card:hover {
+  transform: translateY(-12px) scale(1.05) rotateZ(1deg);
+  box-shadow: 0 14px 40px rgba(255,182,255,0.6), 0 0 35px rgba(255,215,0,0.5);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Project Titles (Gradient Text) */
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Paragraph */
+.project-card p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #3b0066cc;
+}
+
+/* Buttons */
+.btn-view, .btn-back {
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-view {
+  padding: 10px 20px;
+  background: white;
+  color: #7b2cbf;
+}
+
+.btn-view:hover {
+  background: #ffb3ff;
+  color: white;
+}
+
+.btn-back {
+  margin-top: 40px;
+  padding: 12px 25px;
+  background: white;
+  color: #7b2cbf;
+}
+
+.btn-back:hover {
+  background: #ffb3ff;
+  color: white;
+}
+
+/* ---------------- Gradients for Cards ---------------- */
+.project-card:nth-child(1) { background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%); }
+.project-card:nth-child(2) { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+.project-card:nth-child(3) { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); }
+.project-card:nth-child(4) { background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%); }
+.project-card:nth-child(5) { background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); }
+.project-card:nth-child(6) { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.project-card:nth-child(7) { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+.project-card:nth-child(8) { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+
+/* ---------------- Next Button (used on Projects page) ---------------- */
+.next-btn {
+  display: inline-block;
+  margin: 24px auto 0;
+  padding: 10px 26px;
+  background: linear-gradient(135deg, #b700ff, #ffb3ff);
+  color: #4b0082;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255,182,255,0.25);
+  border: 2px solid rgba(255,255,255,0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* hover and focus effects */
+.next-btn:hover,
+.next-btn:focus {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255,182,255,0.32);
+  outline: none;
+}
+
+/* mobile responsive */
+@media (max-width: 520px) {
+  .next-btn {
+    width: calc(100% - 40px);
+    max-width: none;
+    padding: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

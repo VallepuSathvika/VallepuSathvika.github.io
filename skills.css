@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #9d4edd, #9d4edd);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.skills-section {
+  width: 80%;
+  max-width: 850px;
+  background: radial-gradient(circle at top left, #9d4edd, #c77dff);
+  padding: 25px 60px;
+  border-radius: 100px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.skills-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px #ffd6ff;
+}
+
+.skills-section p {
+  font-size: 18px;
+  color: #f3e8ff;
+  margin-bottom: 40px;
+}
+
+.skill {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.skill h3 {
+  margin-bottom: 8px;
+  color: #ffd6ff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-heading {
+  display: inline-block;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #ffb3ff, #ffd700); /* pink-gold gradient */
+  border-radius: 50px; /* oval shape */
+  box-shadow: 0 0 20px rgba(255, 214, 255, 0.6);
+  margin-bottom: 25px;
+}
+
+.skills-heading h2 {
+  margin: 0;
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 10px #fff5b1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #fff4b3, #ff00e1); /* pink → gold */
+  transition: width 2s ease-in-out;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: white;
+  color: #7b2cbf;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 2s;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: #ffb3ff;
+  color: white;
+}
+/* ---------------- Next Button (used on Skills page) ---------------- */
+.next-btn {
+  display: inline-block;
+  margin: 24px auto 0;          /* centered with top gap */
+  padding: 10px 26px;
+  background: linear-gradient(135deg, #d000ff, #ffb3ff);
+  color: #4b0082;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255,182,255,0.25);
+  border: 2px solid rgba(255,255,255,0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* hover / focus */
+.next-btn:hover,
+.next-btn:focus {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255,182,255,0.32);
+  outline: none;
+}
+
+/* make it accessible for keyboard users */
+.next-btn:focus {
+  box-shadow: 0 0 0 4px rgba(123, 36, 190, 0.12);
+}
+
+/* responsive: keep it full-width on small screens */
+@media (max-width: 520px) {
+  .next-btn {
+    width: calc(100% - 40px);
+    max-width: none;
+    padding: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes fadeUp {
+  0% { opacity:0; transform:translateY(20px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .skills-section { width: 90%; padding: 40px 35px; border-radius: 80px; }
+  .skills-section h2 { font-size: 32px; }
+  .skills-section p { font-size: 16px; }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-section { width: 95%; padding: 30px 25px; border-radius: 60px; }
+  .skills-section h2 { font-size: 28px; }
+  .skills-section p { font-size: 15px; }
+}
+
+/* Glow animation for all skills */
+.progress[data-progress] {
+  animation: glowProgress 2s infinite alternate;
+}
+
+@keyframes glowProgress {
+  0% { box-shadow: 0 0 5px #ffb3ff; }
+  50% { box-shadow: 0 0 15px hsl(303, 100%, 50%); }
+  100% { box-shadow: 0 0 5px #ffb3ff; }
+}

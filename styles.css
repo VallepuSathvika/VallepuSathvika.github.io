@@ -1,0 +1,133 @@
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* move all content to right */
+  align-items: center;
+  background: #4b0082;  /* deep purple */
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffd6ff;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffd6ff;
+  text-shadow: 0 0 10px #ffd6ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #c77dff, #9d4edd);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 100px 20px;
+}
+
+.profile img {
+  width: 225px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.profile h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+.profile h1 span {
+  color: #ffd6ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffd6ff, 0 0 20px #b5179e, 0 0 30px #7209b7;
+  }
+  to {
+    text-shadow: 0 0 20px #f3e8ff, 0 0 30px #c77dff, 0 0 40px #9d4edd;
+  }
+}
+
+
+.profile p {
+  color: #f3e8ff;   /* soft lavender – perfect on purple */
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: white;
+  color: #7b2cbf;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffb3ff;
+  color: white;
+}
+/* ---------------- Hire Me Button ---------------- */
+.btn-hire {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b0082;
+  background: linear-gradient(135deg, #ffd700, #ffb3ff);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 182, 255, 0.6);
+  border: 2px solid transparent;
+}
+
+.btn-hire:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #ffb3ff, #ea00ff);
+  box-shadow: 0 0 25px rgba(255, 215, 255, 0.8);
+  border: 2px solid white;
+}
